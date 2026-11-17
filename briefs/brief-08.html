@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brief 8 - Road, rail or barge | BI vs AI</title><link rel="stylesheet" href="../assets/style.css"></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BI <b>vs</b> AI</a><nav aria-label="Main"><a href="../index.html">Findings</a><a href="../index.html#scorecard">Scorecard</a><a href="../index.html#briefs" aria-current=page>Briefs</a><a href="../index.html#gaps">Open questions</a></nav></div></header>
+
+<section class="bhero" style="--brief:#14325C"><div class="wrap"><div class="crumb"><a href="../index.html">BI vs AI</a> › Brief 8 (main project)</div>
+<h1>Road, rail or barge for export containers</h1><p>Perfetti Van Melle, Breda · Should the plant’s maritime export containers move off road onto rail or barge, and through Rotterdam or Antwerp?</p></div></section>
+<section style="--brief:#14325C"><div class="wrap">
+ <div class="grid g3">
+  <div class="card"><h3>Decision-maker</h3><p>Logistics manager at a manufacturer moving steady volumes; PVM Breda ships up to about 13,500 t of export containers a year (upper bound).</p></div>
+  <div class="card"><h3>Data</h3><p>60 inputs from 35 public sources: KiM/Panteia cost rates, CO2emissiefactoren.nl, Dutch and Flemish truck charges, OSRM / EuRIS / OpenRailRouting distances, terminal turnaround times.</p></div>
+  <div class="card"><h3>Method</h3><p>Door-to-door annual cost, hours per trip and CO2 per mode and corridor; min-max 0–100 per corridor; weighted by the user. Scope check: widening to all PVM lanes was tested and dropped (no public lane data).</p></div>
+ </div>
+ <div class="card" style="margin-top:16px;border-left:4px solid #14325C"><h3>Result</h3><p>Rail wins Rotterdam (72.7 vs 50.0 at default weights, €21.6k a year cheaper than road, −38% CO2). Road and barge tie on Antwerp, where there is no rail service. Recommended: pilot the Rotterdam lane on the Tilburg–Rotterdam rail shuttle for one quarter.</p>
+  <p>Data confidence <span class="pill p-mh">Moderate–high</span> &nbsp; Result confidence <span class="pill p-mod">Moderate</span></p></div>
+</div></section>
+<section class="alt" style="--brief:#14325C"><div class="wrap">
+ <h2>Dashboard (built in Data Studio)</h2>
+ <p class="lead">This brief was built in a BI tool because the course required it. The report reads a Google Sheet copy of the Excel model.</p>
+ <div class="dash" style="padding:0"><iframe title="PVM Transport Mode Dashboard (Data Studio)" src="https://datastudio.google.com/embed/reporting/08587f25-d49a-4221-a2dc-c5e2114884f9/page/TlJ0C" style="width:100%;aspect-ratio:4/3;border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" loading="lazy"></iframe></div>
+ <p class="note">Full project site: <a href="https://storeype.github.io/BizITPI.github.io/">https://storeype.github.io/BizITPI.github.io/</a></p>
+</div></section>
+<section style="--brief:#14325C"><div class="wrap">
+ <h2>BI vs AI for this decision</h2>
+ <div class="card"><p><span class="pill p-ai">AI page is enough</span></p><p>A one-off corridor decision on public data, made by one manager. The Data Studio build worked, but it took workarounds (reshaping the model into a long table, parameter naming, filter quirks), and nothing in the decision needed a platform. A web page computing the model in the browser would have been quicker to build. Data Studio’s real advantage was that the team could change inputs in the Google Sheet without touching code.</p></div>
+ <h2 style="margin-top:28px">Data map</h2>
+ <iframe class="map" title="Data map, brief 8" src="downloads/brief-08/PVM_Data_Map.html" loading="lazy"></iframe>
+ <h2 style="margin-top:28px">Downloads</h2><div class="dl"><a class="btn" href="downloads/brief-08/PVM_Transport_Mode_Model.xlsx" download>Excel model</a><a class="btn" href="downloads/brief-08/PVM_Modal_Shift_Final.pptx" download>Presentation</a><a class="btn" href="downloads/brief-08/Group-2_PVM_Final_Report.pdf" target=_blank rel=noopener>Final report (PDF)</a><a class="btn alt" href="downloads/brief-08/PVM_Data_Map.html" target=_blank rel=noopener>Data map</a></div>
+</div></section>
+<footer><div class="wrap">Group 2 · Section 1 · KEDGE MSc ITML · Business Intelligence · Prof. Jorge Clarke · November 2026 · Draft for team review.<br>
+Team: Nelson Delarue, Emma Putod, Srikar Silveru, Peter Storey. Main project: <a href="../briefs/brief-08.html">Brief 8, Perfetti Van Melle</a> · Source: <a href="https://github.com/storeype/BIvsAI">github.com/storeype/BIvsAI</a>.</div></footer>
+</body></html>

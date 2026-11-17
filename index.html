@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BI vs AI - Phase 2 findings</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html">BI <b>vs</b> AI</a><nav aria-label="Main"><a href="index.html" aria-current=page>Findings</a><a href="index.html#scorecard">Scorecard</a><a href="index.html#briefs">Briefs</a><a href="index.html#gaps">Open questions</a></nav></div></header>
+
+<section class="hero"><div class="wrap">
+ <div class="kicker">Phase 2 findings · draft</div>
+ <h1>Does AI make the BI tool unnecessary?</h1>
+ <p><b>The hypothesis.</b> If an AI can find the data, build the model and publish an interactive dashboard as a plain web page, the business-intelligence platform in the middle becomes unnecessary: the analyst no longer needs a BI tool to put a decision in front of a manager.</p>
+ <p><b>The test.</b> We took the briefs on the course menu that public data can support, and ran each one to the standard of our main project (real company, Excel model, data map, themed deck), then asked for each: could a simple AI-built web dashboard serve the decision-maker, or does a BI tool add something the page cannot?</p>
+ <div class="verdict"><b>Answer: partly true.</b> For four of six briefs an AI-built page is enough. A fifth needs a BI platform only once internal data comes in. The sixth genuinely needs one. The deciding factors are not the analysis, which AI handled in every case, but <b>how often the data refreshes</b>, <b>whether the data is internal or sensitive</b>, <b>how many people act on it</b> and <b>whether decisions need an audit trail</b>.</div>
+</div></section>
+
+<section><div class="wrap">
+ <h2>What the six briefs show</h2>
+ <div class="grid g4">
+  <div class="card stat"><b>6 / 6</b><span>briefs where AI found public data, built the model and could build a working web dashboard</span></div>
+  <div class="card stat"><b>4</b><span>where the AI-built page is enough for the decision as briefed (1, 5, 6, 11)</span></div>
+  <div class="card stat"><b>1</b><span>where BI is needed only for the internal-data version (12)</span></div>
+  <div class="card stat"><b>1</b><span>where a BI platform adds real value: twice-weekly refresh, alerts, many users (14)</span></div>
+ </div>
+</div></section>
+
+<section class="alt" id="scorecard"><div class="wrap">
+ <h2>Scorecard</h2>
+ <p class="lead">Data confidence = how good the public data is for the decision. Result confidence = how far we would trust the recommendation as it stands. Ratings are our own (AI) assessment and have not yet been reviewed independently.</p>
+ <div class="scroll"><table>
+  <thead><tr><th>#</th><th>Brief</th><th>Data confidence</th><th>Result confidence</th><th>Could AI build the dashboard?</th><th>BI vs AI verdict</th></tr></thead>
+  <tbody><tr><td><b>8</b></td><td><a href="briefs/brief-08.html">Road, rail or barge for export containers</a><br><span class="note">Perfetti Van Melle · main project</span></td><td><span class="pill p-mh">Moderate–high</span></td><td><span class="pill p-mod">Moderate</span></td><td>Built in Data Studio (BI tool)</td><td><span class="pill p-ai">AI page is enough</span><br><span class="note">Data Studio worked, but nothing in it needed a BI platform</span></td></tr><tr><td><b>1</b></td><td><a href="briefs/brief-01.html">Berth productivity benchmarking</a><br><span class="note">Rotterdam & Antwerp terminals</span></td><td><span class="pill p-high">High</span></td><td><span class="pill p-mod">Moderate</span></td><td>High</td><td><span class="pill p-ai">AI page is enough</span></td></tr><tr><td><b>5</b></td><td><a href="briefs/brief-05.html">Sourcing country shift under tariff change</a><br><span class="note">Decathlon (bicycles & e-bikes)</span></td><td><span class="pill p-high">High</span></td><td><span class="pill p-mod">Moderate</span></td><td>High</td><td><span class="pill p-ai">AI page is enough</span></td></tr><tr><td><b>6</b></td><td><a href="briefs/brief-06.html">Choosing the next export markets</a><br><span class="note">Perfetti Van Melle (HS 1704)</span></td><td><span class="pill p-high">High</span></td><td><span class="pill p-ml">Moderate–low</span></td><td>High</td><td><span class="pill p-ai">AI page is enough</span></td></tr><tr><td><b>11</b></td><td><a href="briefs/brief-11.html">Which vessels to retrofit first</a><br><span class="note">Grimaldi Group fleet</span></td><td><span class="pill p-high">High</span></td><td><span class="pill p-mh">Moderate–high</span></td><td>High</td><td><span class="pill p-ai">AI page is enough</span></td></tr><tr><td><b>12</b></td><td><a href="briefs/brief-12.html">Carbon cost exposure by service</a><br><span class="note">MSC container trades</span></td><td><span class="pill p-mh">Moderate–high</span></td><td><span class="pill p-mod">Moderate</span></td><td>High</td><td><span class="pill p-mix">AI for public data; BI for internal</span></td></tr><tr><td><b>14</b></td><td><a href="briefs/brief-14.html">Chokepoint exposure and rerouting</a><br><span class="note">Maersk lanes</span></td><td><span class="pill p-high">High</span></td><td><span class="pill p-mod">Moderate</span></td><td>High (as a prototype)</td><td><span class="pill p-bi">BI tool adds value</span></td></tr></tbody></table></div>
+ <p class="legend">Pilot: briefs 11 and 14, then 12, then 1, 5 and 6. Brief 18 dropped (data request failed). Briefs 7 and 16 pending data. Synthetic briefs (3, 4, 9, 13, 15, 18) not yet tested.</p>
+</div></section>
+
+<section><div class="wrap">
+ <h2>When does the BI tool earn its place?</h2>
+ <div class="grid g4">
+  <div class="card"><h3>Refresh cadence</h3><p>Annual or quarterly public data: re-run the page. Daily or twice-weekly decisions (Brief 14): scheduled refresh is the product.</p></div>
+  <div class="card"><h3>Internal data</h3><p>Every brief got sharper with company data (terminal logs, purchase orders, sales by country, voyage records). Joining that data safely is what BI platforms do.</p></div>
+  <div class="card"><h3>Many users</h3><p>One manager deciding once a year needs a page. Several desks quoting one surcharge need governed definitions and access control.</p></div>
+  <div class="card"><h3>Audit trail</h3><p>Pricing and rerouting calls get challenged later. Keeping what the numbers said when the call was made is a platform feature, not a page feature.</p></div>
+ </div>
+ <p class="note" style="margin-top:14px">What AI replaced in every brief: the BI developer’s work (finding sources, cleaning, modelling, building the visual). What it did not replace: the platform’s job of running the dashboard reliably for an organisation.</p>
+</div></section>
+
+<section class="alt" id="briefs"><div class="wrap">
+ <h2>The briefs</h2>
+ <p class="lead">Each page summarises the decision, method and result, has a working dashboard (or a placeholder where BI is the better tool), and links to the Excel model, deck and data map.</p>
+ <div class="grid g3 briefcards"><a class="card" style="--c:#0B3C5D" href="briefs/brief-01.html"><div class="num">BRIEF 1</div><h3>Berth productivity benchmarking</h3>
+<p>Rotterdam & Antwerp terminals</p><p class="note">Rotterdam → quay productivity (robust under all five weightings). Antwerp → berth access, but it flips to quay productivity under three of five weightings.</p><p><span class="pill p-ai">AI page is enough</span></p></a><a class="card" style="--c:#0E4D45" href="briefs/brief-05.html"><div class="num">BRIEF 5</div><h3>Sourcing country shift under tariff change</h3>
+<p>Decathlon (bicycles & e-bikes)</p><p class="note">Bicycles → Bangladesh (No. 1 under every weighting), then Viet Nam and Tunisia. E-bikes → Sri Lanka and Cambodia. China ranks last for bicycles (62.5% duty).</p><p><span class="pill p-ai">AI page is enough</span></p></a><a class="card" style="--c:#5B2A86" href="briefs/brief-06.html"><div class="num">BRIEF 6</div><h3>Choosing the next export markets</h3>
+<p>Perfetti Van Melle (HS 1704)</p><p class="note">UK and Canada, then Norway and Switzerland. The US is the largest market but ranks 8th (no EU trade agreement). PVM likely already sells in all ten: public data cannot tell which markets are new.</p><p><span class="pill p-ai">AI page is enough</span></p></a><a class="card" style="--c:#1B4332" href="briefs/brief-11.html"><div class="num">BRIEF 11</div><h3>Which vessels to retrofit first</h3>
+<p>Grimaldi Group fleet</p><p class="note">Ro-pax ferries first: 8 of the top 10, led by Cruise Roma (No. 1 under all five weightings). A €20m cycle covers 10 ships: about 38,500 t CO2 and €11m saved a year.</p><p><span class="pill p-ai">AI page is enough</span></p></a><a class="card" style="--c:#22313F" href="briefs/brief-12.html"><div class="num">BRIEF 12</div><h3>Carbon cost exposure by service</h3>
+<p>MSC container trades</p><p class="note">7 charge, 9 hold, 6 absorb. Raise on South Africa, India/Middle East, Oceania; review West Africa and Intra North Europe (€60–70/TEU above modelled cost). Highly weight-sensitive.</p><p><span class="pill p-mix">AI for public data; BI for internal</span></p></a><a class="card" style="--c:#1F2933" href="briefs/brief-14.html"><div class="num">BRIEF 14</div><h3>Chokepoint exposure and rerouting</h3>
+<p>Maersk lanes</p><p class="note">Hormuz lane: REROUTE (97). Red Sea lanes: WATCH (48–58). Panama: HOLD. Back-test: the Red Sea signal fired on 31 Dec 2023 with no false alarms; Hormuz lagged two weeks and gave 18 false-alarm weeks.</p><p><span class="pill p-bi">BI tool adds value</span></p></a></div>
+</div></section>
+
+<section id="gaps"><div class="wrap">
+ <h2>Open questions in this draft</h2>
+ <div class="gap"><b>Selection bias.</b> We tested the briefs public data can reach, which are the most favourable cases for an AI-built page. The synthetic briefs (3, 4, 9, 13, 15, 18) depend on generated data and may change the answer.</div>
+ <div class="gap"><b>Self-assessed confidence.</b> The confidence ratings and the BI verdicts come from the same AI that built the models. An independent review (the team, or a separate check) should confirm them before they go in the report.</div>
+ <div class="gap"><b>Reasoned, not measured.</b> Apart from the main project (built in Data Studio), we did not build the BI-tool versions, so “BI adds value” is argued from the decision’s needs, not measured in time, cost or user outcomes.</div>
+ <div class="gap"><b>No ground truth.</b> Only Brief 14 has a back-test against what actually happened. The other recommendations are plausible, not validated.</div>
+ <div class="gap"><b>The draft dashboards re-weight, they do not recompute.</b> Scores are frozen when the page is built, so changing a price, threshold or dataset means editing the workbook and republishing the page. A BI tool connected to a live sheet only needs the sheet edited and a refresh. This is a limit of this draft, not of web pages: a page can also read a live published sheet or recompute the model in the browser, which would close the gap.</div>
+</div></section>
+<footer><div class="wrap">Group 2 · Section 1 · KEDGE MSc ITML · Business Intelligence · Prof. Jorge Clarke · November 2026 · Draft for team review.<br>
+Team: Nelson Delarue, Emma Putod, Srikar Silveru, Peter Storey. Main project: <a href="briefs/brief-08.html">Brief 8, Perfetti Van Melle</a> · Source: <a href="https://github.com/storeype/BIvsAI">github.com/storeype/BIvsAI</a>.</div></footer>
+</body></html>
